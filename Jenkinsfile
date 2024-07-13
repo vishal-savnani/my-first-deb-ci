@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent {
+        label 'docker'
+    }
     environment {
         DOCKER_IMAGE='my-docker-image:latest'
     }
