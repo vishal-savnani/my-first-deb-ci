@@ -1,6 +1,6 @@
 pipeline {
     agent any
-    enviornment {
+    environment {
         DOCKER_IMAGE='my-docker-image:latest'
     }
 
@@ -49,7 +49,7 @@ pipeline {
 
         post {
             always {
-                archiveArtifacts artifacts: '*.deb', allowEmptryArchive: true
+                archiveArtifacts artifacts: '*.deb', allowEmptyArchive: true
             }
         }
 }
