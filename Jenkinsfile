@@ -7,7 +7,8 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/vishal-savnani/my-first-deb-ci.git'
+                git branch: 'main', 
+                    url : 'https://github.com/vishal-savnani/my-first-deb-ci.git'
             }
         }
     
@@ -47,7 +48,7 @@ pipeline {
             }
         }
     }
-    
+
         post {
             always {
                 archiveArtifacts artifacts: '*.deb', allowEmptyArchive: true
