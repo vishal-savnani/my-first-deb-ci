@@ -10,7 +10,7 @@ pipeline {
                 git 'https://github.com/vishal-savnani/my-first-deb-ci.git'
             }
         }
-    }
+    
         stage('Build docker image'){
             steps {
                 script {
@@ -46,7 +46,8 @@ pipeline {
                 }
             }
         }
-
+    }
+    
         post {
             always {
                 archiveArtifacts artifacts: '*.deb', allowEmptyArchive: true
