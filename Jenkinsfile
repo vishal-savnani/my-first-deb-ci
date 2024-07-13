@@ -37,7 +37,7 @@ pipeline {
 
                         #build the package
 
-                        dpkg-buildpaclage -us -uc -n
+                        dpkg-buildpackage -us -uc -n
 
                         #move the build package to roott
 
