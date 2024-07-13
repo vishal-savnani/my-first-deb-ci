@@ -27,7 +27,7 @@ pipeline {
 
                         #move to source directory
 
-                        cd src
+                        cd debian
 
                         #install depdencies
 
@@ -35,6 +35,7 @@ pipeline {
 
                         apt-get-install -y build-essential devscripts debhelper
 
+                        
                         #build the package
 
                         dpkg-buildpackage -us -uc -n
