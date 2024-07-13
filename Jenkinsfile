@@ -39,7 +39,7 @@ pipeline {
 
                         dpkg-buildpaclage -us -uc -n
 
-                        #move the build package to root
+                        #move the build package to roott
 
                         mv ../*.deb ../
                         '''
